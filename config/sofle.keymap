@@ -14,13 +14,13 @@
         td_shft_spc: td_shft_spc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&mt LSHIFT SPACE>, <&kp SPACE>;
         };
         td_raise_ret: td_raise_ret {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&lt RAISE RET>, <&kp RET>;
         };
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
@@ -39,14 +39,44 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_plus {
+        combo_lparenthesis {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LS(N9)>;
+        };
+        combo_rparenthesis {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LS(N0)>;
+        };
+        combo_lbrace {
             timeout-ms = <50>;
             key-positions = <19 20>;
+            bindings = <&kp LS(LBKT)>;
+        };
+        combo_rbrace {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LS(RBKT)>;
+        };
+        combo_lbracket {
+            timeout-ms = <50>;
+            key-positions = <43 44>;
+            bindings = <&kp LBKT>;
+        };
+        combo_rbracket {
+            timeout-ms = <50>;
+            key-positions = <44 45>;
+            bindings = <&kp RBKT>;
+        };
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
             bindings = <&kp LS(EQUAL)>;
         };
         combo_equal {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <39 40>;
             bindings = <&kp EQUAL>;
         };
     };
@@ -77,14 +107,14 @@
             display-name = "lower";
 // -----------------------------------------------------------------------------------------------------------------------------
 // |    |  F1 |  F2 |  F3  |  F4  |  F5 |                                        |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |    |  !  |  @  |  #   |  $   |  %  |                                        |      |       |       |      |       |  F12  |
-// |    |  ^  |  &  |  (   |  )   |  *  |                                        |      |       |       |      |       |       |
+// |    |  !  |  @  |  #   |  $   |  %  |                                        |   1  |   2   |   3   |   4  |   5   |  F12  |
+// |    |  ^  |  &  |  *   |  (   |  )  |                                        |   6  |   7   |   8   |   9  |   0   |       |
 // |    |     |     |      |      |     |        |                       |       |      |       |       |      |       |       |
 //            |     |      |      |     |        |                       |       |      |       |       |      |
             bindings = <
 &trans  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
 &trans  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)                   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5  &kp F12
-&kp ESC &kp LS(N6) &kp LS(N7) &kp LS(N9) &kp LS(N0) &kp LS(N8)                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &trans
+&kp ESC &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)                   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &trans
 &trans  &trans     &trans     &trans     &trans     &trans     &trans     &trans &trans &trans &trans &trans &trans  &trans
                    &trans     &trans     &trans     &trans     &trans     &trans &trans &trans &trans &trans
             >;
