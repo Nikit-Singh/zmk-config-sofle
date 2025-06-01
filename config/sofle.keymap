@@ -14,13 +14,13 @@
         td_shft_spc: td_shft_spc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&mt LSHIFT SPACE>, <&kp SPACE>;
         };
         td_raise_ret: td_raise_ret {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&lt RAISE RET>, <&kp RET>;
         };
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
@@ -61,12 +61,12 @@
         };
         combo_lbracket {
             timeout-ms = <50>;
-            key-positions = <43 44>;
+            key-positions = <45 46>;
             bindings = <&kp LBKT>;
         };
         combo_rbracket {
             timeout-ms = <50>;
-            key-positions = <44 45>;
+            key-positions = <46 47>;
             bindings = <&kp RBKT>;
         };
         combo_plus {
