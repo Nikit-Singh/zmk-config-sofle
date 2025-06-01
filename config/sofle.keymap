@@ -88,13 +88,13 @@
             bindings = <&kp LS(RBKT)>;
         };
         // <
-        combo_lbracket {
+        combo_larrow {
             timeout-ms = <50>;
             key-positions = <45 46>;
             bindings = <&kp LS(COMMA)>;
         };
         // >
-        combo_rbracket {
+        combo_rarrow {
             timeout-ms = <50>;
             key-positions = <46 47>;
             bindings = <&kp LS(DOT)>;
